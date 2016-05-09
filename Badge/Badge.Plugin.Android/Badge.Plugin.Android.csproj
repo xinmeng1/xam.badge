@@ -16,6 +16,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Badge.Plugin\CrossBadge.cs">
@@ -52,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +65,20 @@
       <Project>{6edb0588-ffc5-4ef5-8a99-9e241d0f878d}</Project>
       <Name>Badge.Plugin.Abstractions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi-v11\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi-v11\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi-v11\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi-v11\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\plugin_lc_smallicon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi-v11\plugin_lc_smallicon.png" />
+    <Content Include="Resources\plugin_lc_smallicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
